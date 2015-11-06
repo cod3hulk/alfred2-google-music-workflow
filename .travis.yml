@@ -1,2 +1,9 @@
 script:
-  - make clean build
+- make clean build
+deploy:
+  provider: bintray
+  file: ".bintray.json"
+  dry-run: true
+  user: tomave
+  key:
+    secure: OyI8mwhUdQqseunPriMjd5YfFxo0n8zyWOzVc25dAwWl7Znt1vvreu+RQpD5dw+95UUWPL7+PbQbN9zfYAU2ink2ff5jrcwoVLWRECNc9SNZEotK/nvJGPncnawvnyoTxM2JY+XRC/IeHTSQCcyvHiSsn6w+BYPNN2fSGZ6PcBkl/MPwunh3XGGD+sNt6HJQICTNSb4YXYu578yjZuRJrqGRAfEyyEL3fY0K+aI7xDOO85aY3pYXOdJV2BS34GLzbopZcAjDKoJ2Sr4RDWhhA/1ybfs3Y/vi7sV0p6UiACaBgGVhSsKO7Y6LTGwsN2Tr2lpXF+TuoxWW3AMZV2EBUvFfzUo+5O638TMtE5rgS2XQd+yCMtUxRUUfIXuGmAczEMx6rGd5ABFYtYjXTorT9tp+5PwofYOHBEswnkFYVVIDncszJL3c4lLySyN+mDkVzwA5lHAhAZPM4OT2B6rj3bRwxInZ+bWJHuMz3qYs088qP2B6xshUIW8tOJy9FGQ0AXUlICqy26FkaxDXgnXpbFaSNdVwCKW2ZuKypqO0NeLPgsOZfvzwjde+2XblQTlZ4gVkGpwl0e/fa1MOfJvI0c+0O7v+UANMy7nEISlQNtxpfAJfnG4G4WmThIEAtPebZ1HnK36Rs874angGMPqzPKRwAIrC6msJU8C8tcKh9mQ=

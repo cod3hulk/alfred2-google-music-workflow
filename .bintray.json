@@ -1,0 +1,28 @@
+{
+    "package": {
+        "name": "alfred2-google-music-workflow",
+        "repo": "generic",
+        "subject": "Tomas Ave",
+        "desc": "Alfred workflow for controling Google Music in Chrome",
+        "website_url": "https://github.com/tomave/alfred2-google-music-workflow",
+        "vcs_url": "https://github.com/tomave/alfred2-google-music-workflow",
+        "github_use_tag_release_notes": false,
+        "licenses": ["Apache License 2.0"],
+        "labels": ["alfred", "google music", "workflow"],
+        "public_download_numbers": true,
+        "public_stats": true
+    },
+
+    "version": {
+        "name": "0.5",
+        "desc": "This is a version",
+        "released": "2015-01-04",
+        "vcs_tag": "0.5"
+    },
+
+    "files":
+    [
+        {"includePattern": "bin(.*)*/(.*\.alfredworkflow)", "uploadPattern": ".*"}
+    ],
+    "publish": true
+}
