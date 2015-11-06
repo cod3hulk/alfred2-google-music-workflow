@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>1642E310-1EE2-4339-836E-6050E22519FC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>12B705A1-550C-407B-B509-0B1BF3607698</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>421A610F-5BE6-4D5B-9D23-D54335970C80</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>27933858-9166-40DA-8DF7-04A6A65DA38B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>7A68CA7B-0D58-4F30-94D0-65390B3BBE93</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6304E7FB-F745-4793-AC79-93DE0973118D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>D4F2C93E-CC84-4E32-AE00-CBB02D8B1DF7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>50D5F0DE-0BF2-4454-A9CB-B992B6BCEF4F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>F408E028-5E4D-4BD5-AF1F-156AB49C50D5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>79DC69CC-5D60-4111-879B-196DDA1CCA77</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Tomas Ave (@tomave)</string>
+	<key>description</key>
+	<string>Control Google Music in Chrome</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Google Music Chrome Controls</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Google Chrome"
+    repeat with w in (every window)
+      repeat with t in (every tab whose URL contains "play.google.com/music") of w
+        tell t to execute javascript "document.querySelector('paper-icon-button[data-id=\"forward\"]').click()"
+        return true
+      end repeat
+    end repeat
+  end tell
+end alfred_script				</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>27933858-9166-40DA-8DF7-04A6A65DA38B</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>gm next</string>
+				<key>subtext</key>
+				<string>Go the the next track</string>
+				<key>text</key>
+				<string>Next Track</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>421A610F-5BE6-4D5B-9D23-D54335970C80</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Google Chrome"
+    repeat with w in (every window)
+      repeat with t in (every tab whose URL contains "play.google.com/music") of w
+        tell t to execute javascript "document.querySelector('paper-icon-button[data-id=\"play-pause\"]').click()"
+        return true
+      end repeat
+    end repeat
+  end tell
+end alfred_script				</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>6304E7FB-F745-4793-AC79-93DE0973118D</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>gm play/pause</string>
+				<key>subtext</key>
+				<string>Play/Pause the current track</string>
+				<key>text</key>
+				<string>Play/Pause</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>7A68CA7B-0D58-4F30-94D0-65390B3BBE93</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>gm previous</string>
+				<key>subtext</key>
+				<string>Go to the previous track</string>
+				<key>text</key>
+				<string>Previous Track</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>1642E310-1EE2-4339-836E-6050E22519FC</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Google Chrome"
+    repeat with w in (every window)
+      repeat with t in (every tab whose URL contains "play.google.com/music") of w
+        tell t to execute javascript "document.querySelector('paper-icon-button[data-id=\"play-pause\"]').click()"
+        return true
+      end repeat
+    end repeat
+  end tell
+end alfred_script				</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>12B705A1-550C-407B-B509-0B1BF3607698</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Google Chrome"
+    repeat with w in (every window)
+      repeat with t in (every tab whose URL contains "play.google.com/music") of w
+        tell t to execute javascript "document.querySelector('paper-icon-button[data-id=\"play-pause\"]').click()"
+        return true
+      end repeat
+    end repeat
+  end tell
+end alfred_script				</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>50D5F0DE-0BF2-4454-A9CB-B992B6BCEF4F</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>gm thumbs up</string>
+				<key>subtext</key>
+				<string>Rate the current track with a thumbs up</string>
+				<key>text</key>
+				<string>Thumbs Up</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>D4F2C93E-CC84-4E32-AE00-CBB02D8B1DF7</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>gm open</string>
+				<key>subtext</key>
+				<string>Open Google Music</string>
+				<key>text</key>
+				<string>Open Google Music</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>F408E028-5E4D-4BD5-AF1F-156AB49C50D5</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+	tell application "Google Chrome"		activate		repeat with w in windows			set i to 1			repeat with t in tabs of w				if URL of t starts with "https://play.google.com/music" then					set active tab index of w to i					set index of w to 1					return				end if				set i to i + 1			end repeat		end repeat		open location "https://play.google.com/music"	end tell
+end alfred_script				</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>79DC69CC-5D60-4111-879B-196DDA1CCA77</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>12B705A1-550C-407B-B509-0B1BF3607698</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>1642E310-1EE2-4339-836E-6050E22519FC</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>27933858-9166-40DA-8DF7-04A6A65DA38B</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>421A610F-5BE6-4D5B-9D23-D54335970C80</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>50D5F0DE-0BF2-4454-A9CB-B992B6BCEF4F</key>
+		<dict>
+			<key>ypos</key>
+			<real>370</real>
+		</dict>
+		<key>6304E7FB-F745-4793-AC79-93DE0973118D</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>79DC69CC-5D60-4111-879B-196DDA1CCA77</key>
+		<dict>
+			<key>ypos</key>
+			<real>490</real>
+		</dict>
+		<key>7A68CA7B-0D58-4F30-94D0-65390B3BBE93</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>D4F2C93E-CC84-4E32-AE00-CBB02D8B1DF7</key>
+		<dict>
+			<key>ypos</key>
+			<real>370</real>
+		</dict>
+		<key>F408E028-5E4D-4BD5-AF1F-156AB49C50D5</key>
+		<dict>
+			<key>ypos</key>
+			<real>490</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://tomave.github.io</string>
+</dict>
+</plist>
