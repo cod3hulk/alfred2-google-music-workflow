@@ -85,7 +85,7 @@
       end repeat
     end repeat
   end tell
-end alfred_script				</string>
+end alfred_script</string>
 				<key>cachescript</key>
 				<true/>
 			</dict>
@@ -130,7 +130,7 @@ end alfred_script				</string>
       end repeat
     end repeat
   end tell
-end alfred_script				</string>
+end alfred_script</string>
 				<key>cachescript</key>
 				<true/>
 			</dict>
@@ -165,27 +165,6 @@ end alfred_script				</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>gm previous</string>
-				<key>subtext</key>
-				<string>Go to the previous track</string>
-				<key>text</key>
-				<string>Previous Track</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>1642E310-1EE2-4339-836E-6050E22519FC</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>applescript</key>
 				<string>on alfred_script(q)
   tell application "Google Chrome"
@@ -210,24 +189,21 @@ end alfred_script				</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-  tell application "Google Chrome"
-    repeat with w in (every window)
-      repeat with t in (every tab whose URL contains "play.google.com/music") of w
-        tell t to execute javascript "document.querySelector('paper-icon-button[data-id=\"play-pause\"]').click()"
-        return true
-      end repeat
-    end repeat
-  end tell
-end alfred_script				</string>
-				<key>cachescript</key>
-				<true/>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>gm previous</string>
+				<key>subtext</key>
+				<string>Go to the previous track</string>
+				<key>text</key>
+				<string>Previous Track</string>
+				<key>withspace</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>50D5F0DE-0BF2-4454-A9CB-B992B6BCEF4F</string>
+			<string>1642E310-1EE2-4339-836E-6050E22519FC</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -249,6 +225,30 @@ end alfred_script				</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>D4F2C93E-CC84-4E32-AE00-CBB02D8B1DF7</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Google Chrome"
+    repeat with w in (every window)
+      repeat with t in (every tab whose URL contains "play.google.com/music") of w
+        tell t to execute javascript "document.querySelector('paper-icon-button[data-id=\"play-pause\"]').click()"
+        return true
+      end repeat
+    end repeat
+  end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>50D5F0DE-0BF2-4454-A9CB-B992B6BCEF4F</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -279,7 +279,7 @@ end alfred_script				</string>
 				<key>applescript</key>
 				<string>on alfred_script(q)
 	tell application "Google Chrome"		activate		repeat with w in windows			set i to 1			repeat with t in tabs of w				if URL of t starts with "https://play.google.com/music" then					set active tab index of w to i					set index of w to 1					return				end if				set i to i + 1			end repeat		end repeat		open location "https://play.google.com/music"	end tell
-end alfred_script				</string>
+end alfred_script</string>
 				<key>cachescript</key>
 				<true/>
 			</dict>
