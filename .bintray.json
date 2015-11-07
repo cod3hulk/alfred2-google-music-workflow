@@ -7,7 +7,7 @@
         "website_url": "https://github.com/tomave/alfred2-google-music-workflow",
         "vcs_url": "https://github.com/tomave/alfred2-google-music-workflow",
         "github_use_tag_release_notes": false,
-        "licenses": ["Apache License 2.0"],
+        "licenses": ["Apache-2.0"],
         "labels": ["alfred", "google music", "workflow"],
         "public_download_numbers": true,
         "public_stats": true
