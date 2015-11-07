@@ -2,7 +2,7 @@
     "package": {
         "name": "alfred2-google-music-workflow",
         "repo": "generic",
-        //"subject": "Tomas Ave",
+        "subject": "tomave",
         "desc": "Alfred workflow for controling Google Music in Chrome",
         "website_url": "https://github.com/tomave/alfred2-google-music-workflow",
         "vcs_url": "https://github.com/tomave/alfred2-google-music-workflow",
