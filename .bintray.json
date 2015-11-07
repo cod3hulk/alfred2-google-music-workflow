@@ -20,7 +20,7 @@
 
     "files":
     [
-        {"includePattern": "bin/(.*\.alfredworkflow)", "uploadPattern": "foo"}
+        {"includePattern": "bin/(.*\.alfredworkflow)", "uploadPattern": "$1"}
     ],
     "publish": true
 }
