@@ -20,7 +20,7 @@
 
     "files":
     [
-        {"includePattern": "bin/(.*\.alfredworkflow)", "uploadPattern": "alfredworkflow/"}
+        {"includePattern": "bin/alfred2-google-music-workflow.alfredworkflow)", "uploadPattern": "foo"}
     ],
     "publish": true
 }
